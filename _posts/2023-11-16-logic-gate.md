@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
     <style>
-        body {
-            background-color: #B5CEFF;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
+       .rectangle1 {
+        position:absolute;
+        background-color:#b5ceff;
+        height: 100%;
+        width: 100%;
         }
         #header {
             background-color: #ffffff;
             padding: 10px;
             text-align: center;
+            font-family: JetBrainsMono; 
         }
         #button-container {
             text-align: center;
-            margin-top: 20px;
+            position: absolute;
+            top: 170px; /* Adjust the top position as needed */
+            left: 50%;
+            transform: translateX(-50%);
         }
         .page-button {
             display: inline-block;
@@ -26,7 +26,7 @@
             padding: 10px 20px;
             font-size: 16px;
             text-decoration: none;
-            background-color: #4CAF50;
+            background-color: #246FFF;
             color: white;
             border: none;
             border-radius: 5px;
@@ -35,16 +35,13 @@
     </style>
 </head>
 <body>
-    <div id="header">
-        <h1>Your Page Title</h1>
-    </div>
     <div id="button-container">
-        <a class="page-button" href="page1.html">Page 1</a>
-        <a class="page-button" href="page2.html">Page 2</a>
-        <a class="page-button" href="page3.html">Page 3</a>
-        <a class="page-button" href="page4.html">Page 4</a>
-        <a class="page-button" href="page5.html">Page 5</a>
-        <a class="page-button" href="page6.html">Page 6</a>
+        <a class="page-button" href="page1.html">AND</a>
+        <a class="page-button" href="page2.html">OR</a>
+        <a class="page-button" href="page3.html">XOR 3</a>
+        <a class="page-button" href="page4.html">NAND</a>
+        <a class="page-button" href="page5.html">NOR</a>
+        <a class="page-button" href="page6.html">XNOR</a>
     </div>
 </body>
 </html>
