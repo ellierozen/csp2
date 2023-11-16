@@ -68,8 +68,7 @@ def play_binary_guessing_game():
 
 if __name__ == "__main__":
     play_binary_guessing_game()
-</code>
-</pre>
+
 
 </body>
 </html>
