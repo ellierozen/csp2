@@ -1,5 +1,8 @@
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gates</title>
     <style>
        .rectangle1 {
         position:absolute;
@@ -35,6 +38,9 @@
     </style>
 </head>
 <body>
+    <div id="header">
+        <h1>Logic Gates</h1>
+    </div>
     <div id="button-container">
         <a class="page-button" href="page1.html">AND</a>
         <a class="page-button" href="page2.html">OR</a>
