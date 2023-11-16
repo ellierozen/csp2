@@ -8,6 +8,32 @@ type: plans
 courses: { compsci: {week: 0} }
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Guessing Game</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Binary Guessing Game Code</h1>
+
+<pre>
+<code>
 import random
 
 def generate_binary_number(length):
@@ -42,3 +68,8 @@ def play_binary_guessing_game():
 
 if __name__ == "__main__":
     play_binary_guessing_game()
+</code>
+</pre>
+
+</body>
+</html>
