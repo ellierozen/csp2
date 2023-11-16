@@ -1,75 +1,80 @@
----
-toc: true
-comments: false
-layout: post
-title: Number guesser
-description: Example Blog!!!  This shows planning and notes from hacks.
-type: plans
-courses: { compsci: {week: 0} }
----
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binary Guessing Game</title>
+    <title>Binary Number Guesser</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
+            text-align: center;
             margin: 20px;
+            background-color: #f5f5f5;
         }
-        pre {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border: 1px solid #ddd;
-            white-space: pre-wrap;
-            word-wrap: break-word;
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #game-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultMessage {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #000000
         }
     </style>
 </head>
 <body>
 
-<h1>Binary Guessing Game Code</h1>
+<div id="game-container">
+    <label for="guessInput">Enter your guess (a binary number):</label>
+    <input type="text" id="guessInput" placeholder="Enter binary number" autocomplete="off">
+    <button onclick="checkNumber()">Check Number</button>
+    <p id="resultMessage"></p>
+</div>
 
-<pre>
-<code>
-import random
+<script>
+    function checkNumber() {
+        const guessInput = document.getElementById('guessInput');
+        const resultMessage = document.getElementById('resultMessage');
 
-def generate_binary_number(length):
-    return ''.join(random.choice('01') for _ in range(length))
-
-def get_player_guess():
-    while True:
-        guess = input("Enter your guess (a binary number): ")
-        if all(bit in '01' for bit in guess):
-            return guess
-        else:
-            print("Invalid input. Please enter a valid binary number.")
-
-def play_binary_guessing_game():
-    print("Welcome to the Binary Guessing Game!")
-    print("I've generated a binary number. Try to guess it!")
-
-    binary_number_length = 8  # You can adjust the length of the binary number as desired
-    secret_number = generate_binary_number(binary_number_length)
-
-    attempts = 0
-    while True:
-        player_guess = get_player_guess()
-        attempts += 1
-
-        if player_guess == secret_number:
-            print(f"Congratulations! You guessed the correct binary number: {secret_number}")
-            print(f"It took you {attempts} attempts.")
-            break
-        else:
-            print("Incorrect! Try again.")
-
-if __name__ == "__main__":
-    play_binary_guessing_game()
-</code>
-</pre>
+        const guess = guessInput.value;
+        if (guess === '100101') {
+            resultMessage.textContent = 'Congratulations! You guessed the correct binary number: 100101';
+        } else {
+            resultMessage.textContent = 'Wrong Answer!';
+        }
+    }
+</script>
 
 </body>
 </html>
