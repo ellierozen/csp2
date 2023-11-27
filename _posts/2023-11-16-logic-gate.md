@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Logic Gates</title>
     <style>
         body {
             background-color: #B5CEFF;
@@ -36,7 +36,7 @@
 </head>
 <body>
     <div id="header">
-        <h1>Your Page Title</h1>
+        <h1>Logic Gates</h1>
     </div>
     <div id="button-container">
         <a class="page-button" href="page1.html">Page 1</a>
