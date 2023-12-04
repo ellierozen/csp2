@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Set the character set for the document -->
@@ -23,7 +22,7 @@
     .box {
       width: 50px;
       height: 50px;
-      border: 1px solid #000;
+      border: 1px solid #ccc;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -37,6 +36,7 @@
       align-items: center;
       justify-content: center;
       background-color: #ccc;
+      margin-bottom: 20px
     }
   </style>
   <!-- Set the title of the HTML document -->
@@ -55,6 +55,8 @@
 <!-- Output box -->
 <div id="output" onclick="calculateOutput()">0</div>
 
+<div id="gateType" style="display: none;">AND</div>
+
 <script>
   // Object to store input values
   let inputs = {
@@ -68,18 +70,26 @@
     inputs[input] = 1 - inputs[input];
     // Update the displayed value in the input box
     document.getElementById(input).innerText = inputs[input];
-    // Recalculate the logic gate output
+    console.log("Toggled", input, "to", inputs[input]);
     calculateOutput();
   }
 
   // Function to calculate the logic gate output based on input values
   function calculateOutput() {
-    // Call the logicGate function with input values and update the output box
-    const result = logicGate(inputs.input1, inputs.input2);
+    const gateType = document.getElementById("gateType").innerText.trim();
+    const result = logicGate(inputs.input1, inputs.input2, gateType);
+    console.log("Calculated output:", result);
     document.getElementById("output").innerText = result;
+
+    // Change the color of the output box based on logic gate type
+    const output = document.getElementById("output");
+    if (result) {
+      output.style.backgroundColor = "yellow";
+    } else {
+      output.style.backgroundColor = "#ccc"; // Reset the background color
+    }
   }
 
-  // Function to implement various logic gates
   function logicGate(input1, input2, gateType) {
     switch (gateType) {
       case 'AND':
@@ -110,6 +120,9 @@
     document.getElementById("input1").innerText = '0';
     document.getElementById("input2").innerText = '0';
     document.getElementById("output").innerText = '0';
+
+    // Reset the background color of the output box
+    document.getElementById("output").style.backgroundColor = "#ccc";
   }
 </script>
 
