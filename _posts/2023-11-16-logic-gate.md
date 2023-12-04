@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
   <!-- Set the character set for the document -->
@@ -13,6 +14,7 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
+      background-color: #B5CEFF; /* Set background color */
     }
     .container {
       display: flex;
@@ -36,13 +38,35 @@
       align-items: center;
       justify-content: center;
       background-color: #ccc;
-      margin-bottom: 20px
+      margin-bottom: 20px;
+    }
+    #logicOptions {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      background-color: #90C3D4; /* Set logic options background color */
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    #logicOptions button {
+      padding: 10px;
+      cursor: pointer;
     }
   </style>
   <!-- Set the title of the HTML document -->
   <title>Logic Gates Demo</title>
 </head>
 <body>
+
+<!-- Logic options at the top of the page -->
+<div id="logicOptions">
+  <button onclick="changeGate('AND')" style="background-color: #6F98A8;">AND Gate</button>
+  <button onclick="changeGate('OR')" style="background-color: #587B8E;">OR Gate</button>
+  <button onclick="changeGate('NOR')" style="background-color: #405E73;">NOR Gate</button>
+  <button onclick="changeGate('XOR')" style="background-color: #284057;">XOR Gate</button>
+  <button onclick="changeGate('NAND')" style="background-color: #12233E;">NAND Gate</button>
+  <button onclick="changeGate('XNOR')" style="background-color: #001845;">XNOR Gate</button>
+</div>
 
 <!-- Container for input boxes -->
 <div class="container">
@@ -125,16 +149,6 @@
     document.getElementById("output").style.backgroundColor = "#ccc";
   }
 </script>
-
-<!-- Buttons to change the logic gate type -->
-<div>
-  <button onclick="changeGate('AND')">AND Gate</button>
-  <button onclick="changeGate('OR')">OR Gate</button>
-  <button onclick="changeGate('NOR')">NOR Gate</button>
-  <button onclick="changeGate('XOR')">XOR Gate</button>
-  <button onclick="changeGate('NAND')">NAND Gate</button>
-  <button onclick="changeGate('XNOR')">XNOR Gate</button>
-</div>
 
 </body>
 </html>
