@@ -130,7 +130,7 @@ Liquid for loop includes last number, thus the Minus
     }
     // toggle selected bit and recalculate
     function toggleBit(i) {
-        //alert("Digit action: " + i );
+        //alert("Digit action: " + i ); 
         const dig = document.getElementById('digit' + i);
         const image = document.getElementById('bulb' + i);
         const butt = document.getElementById('butt' + i);
