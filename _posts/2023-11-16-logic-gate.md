@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Set the character set for the document -->
   <meta charset="UTF-8">
+  <!-- Define the viewport settings for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add styles for the page layout and elements -->
   <style>
     body {
       display: flex;
@@ -36,60 +39,71 @@
       background-color: #ccc;
     }
   </style>
+  <!-- Set the title of the HTML document -->
   <title>Logic Gates Demo</title>
 </head>
 <body>
 
+<!-- Container for input boxes -->
 <div class="container">
+  <!-- Input box 1 -->
   <div id="input1" class="box" onclick="toggleBox('input1')">0</div>
+  <!-- Input box 2 -->
   <div id="input2" class="box" onclick="toggleBox('input2')">0</div>
 </div>
 
+<!-- Output box -->
 <div id="output" onclick="calculateOutput()">0</div>
 
 <script>
+  // Object to store input values
   let inputs = {
     input1: 0,
     input2: 0
   };
 
+  // Function to toggle the state of an input box
   function toggleBox(input) {
+    // Toggle the value (0 to 1, 1 to 0)
     inputs[input] = 1 - inputs[input];
+    // Update the displayed value in the input box
     document.getElementById(input).innerText = inputs[input];
+    // Recalculate the logic gate output
     calculateOutput();
   }
 
+  // Function to calculate the logic gate output based on input values
   function calculateOutput() {
+    // Call the logicGate function with input values and update the output box
     const result = logicGate(inputs.input1, inputs.input2);
     document.getElementById("output").innerText = result;
   }
 
+  // Function to implement various logic gates
   function logicGate(input1, input2, gateType) {
-    function logicGate(input1, input2, gateType) {
-  switch (gateType) {
-    case 'AND':
-      return input1 && input2;
-    case 'OR':
-      return input1 || input2;
-    case 'NOR':
-      return !(input1 || input2);
-    case 'XOR':
-      return (input1 || input2) && !(input1 && input2);
-    case 'NAND':
-      return !(input1 && input2);
-    case 'XNOR':
-      return !(input1 || input2) || (input1 && input2);
-    default:
-      return 0;
-  }
-}
-
+    switch (gateType) {
+      case 'AND':
+        return input1 && input2;
+      case 'OR':
+        return input1 || input2;
+      case 'NOR':
+        return !(input1 || input2);
+      case 'XOR':
+        return (input1 || input2) && !(input1 && input2);
+      case 'NAND':
+        return !(input1 && input2);
+      case 'XNOR':
+        return !(input1 || input2) || (input1 && input2);
+      default:
+        return 0;
+    }
   }
 </script>
 
 <script>
+  // Function to change the logic gate type
   function changeGate(gateType) {
-    // Update the logic gate type
+    // Update the displayed gate type
     document.getElementById("gateType").innerText = gateType;
     // Reset inputs and output
     inputs = { input1: 0, input2: 0 };
@@ -99,6 +113,7 @@
   }
 </script>
 
+<!-- Buttons to change the logic gate type -->
 <div>
   <button onclick="changeGate('AND')">AND Gate</button>
   <button onclick="changeGate('OR')">OR Gate</button>
