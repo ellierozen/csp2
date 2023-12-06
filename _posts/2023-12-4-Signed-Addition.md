@@ -2,7 +2,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Signed Addition</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,66 +9,71 @@
             margin: 50px;
         }
         .container {
-            background-color: #3498db; /* Blue color for the container */
-            padding: 20px;
+            background-color: #3498db;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px; /* Adjust the width as needed */
+            max-width: 400px; 
             margin: auto;
         }
         h1 {
-            color: #001f3f; /* Dark blue color for the title */
+            color: #001f3f; 
         }
         label {
-            background-color: #3498db; /* Blue color for labels */
-            color: #fff; /* Text color */
+            background-color: #3498db; 
+            color: #fff; 
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            display: inline-block; /* Make labels inline-block to align properly */
-            margin-bottom: 10px; /* Add margin between labels and input fields */
+            display: inline-block; 
+            margin-bottom: 10px; 
         }
         label:hover {
-            background-color: #2980b9; /* Darker blue on hover */
+            background-color: #2980b9; 
         }
         input {
             padding: 8px;
             margin-bottom: 10px;
         }
         button {
-            background-color: #3498db; /* Blue color for the button */
-            color: #fff; /* Text color */
+            background-color: #0000; 
+            color: #fff; 
             padding: 10px 20px;
             border: #00008B;
             border-radius: 5px;
             cursor: pointer;
+        }
+        p {
+            font-weight: bold;
+            color: #008000;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-<h1>Signed Addition</h1>
+    <h1>Signed Addition</h1>
+    <p>w/ Binary Output</p>
     <label for="num1">Enter the first number: </label>
     <input type="number" id="num1">
     <label for="num2">Enter the second number: </label>
     <input type="number" id="num2">
-    <button onclick="performAddition()">Add</button>
+     <button onclick="performSignedAddition()" style="background-color: black; color: white;">Add</button>
     <p id="result">Result: </p>
 </div>
 
 <script>
-    function performAddition() {
-        // Get the values from the input fields
+    function performSignedAddition() {
+        // gets the values from the input fields
         var num1 = parseInt(document.getElementById("num1").value);
         var num2 = parseInt(document.getElementById("num2").value);
 
-        // Perform signed addition
+        // performs signed addition
         var result = num1 + num2;
 
-        // Display the result
-        document.getElementById("result").innerText = "Result: " + result;
+        // displays the result in binary
+        var binaryResult = (result >>> 0).toString(2); // ensures positive conversion 
+        document.getElementById("result").innerText = "Result (Binary): " + binaryResult;
     }
 </script>
 
