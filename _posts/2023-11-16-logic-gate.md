@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,42 +11,68 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color: #B5CEFF;
+      background-color: #43719E!important;
     }
-    .container {
+   .container {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Adjust to space-around if needed */
+      width: 80%; /* Adjust the width as needed */
+      margin: auto; /* Center the container horizontally */
       margin-bottom: 20px;
     }
-    .box {
-      width: 50px;
-      height: 50px;
+    .input-container {
+      text-align: center; /* Center text within the container */
+    }  
+    #input1Container {
+      margin-right: auto; /* Push Input 1 to the left */
+    }
+    #input2Container {
+      margin-left: auto; /* Push Input 2 to the right */
+    }
+     .box {
+      width: 70px;
+      height: 70px;
       border: 1px solid #ccc;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      margin-bottom: 5px; /* Add margin between input boxes */
+    }
+    #inputLabels {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 10px; /* Add margin between labels and input boxes */
+    }
+    #input1Label,
+    #input2Label {
+      text-align: center; /* Center text within the label */
     }
     #output {
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       border: 1px solid #000;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #ccc;
       margin-bottom: 20px;
+      /* Center the button horizontally and vertically */
+      margin: auto;
     }
     #logicOptions {
       display: flex;
       justify-content: space-around;
       width: 100%;
-      background-color: #90C3D4;
-      padding: 10px;
+      background-color: #90C3D4!important;
+      padding: 30px;
       margin-bottom: 20px;
+       font-size: 16px; 
     }
     #logicOptions button {
-      padding: 10px;
+      padding: 30px;
       cursor: pointer;
       border: none;
       color: white;
@@ -60,6 +85,8 @@
     #logicOptions button.active {
       background-color: #ADD8E6 !important;
     }
+  
+
   </style>
 </head>
 <body>
@@ -74,8 +101,14 @@
 </div>
 
 <div class="container">
-  <div id="input1" class="box" onclick="toggleBox('input1')">0</div>
-  <div id="input2" class="box" onclick="toggleBox('input2')">0</div>
+  <div class="input-container" id="input1Container">
+    <div id="input1Label">Input 1</div>
+    <div id="input1" class="box" onclick="toggleBox('input1')">0</div>
+  </div>
+  <div class="input-container" id="input2Container">
+    <div id="input2Label">Input 2</div>
+    <div id="input2" class="box" onclick="toggleBox('input2')">0</div>
+  </div>
 </div>
 
 <div id="output" onclick="calculateOutput()">0</div>
