@@ -149,10 +149,15 @@ const IMAGE_OFF = "{{site.baseurl}}/images/off.png";
   }
 
     function calculateOutput() {
+  // Get the selected logic gate type from the HTML element
     const gateType = document.getElementById("gateType").innerText.trim();
-    const result = logicGate(inputs.input1, inputs.input2, gateType);
-    console.log("Calculated output:", result);
 
+    // Call the logicGate function with inputs and gateType to get the result
+    const result = logicGate(inputs.input1, inputs.input2, gateType);
+
+    // Log the calculated output to the console
+    console.log("Calculated output:", result);
+    
     // Change the source of the image based on the logic gate result
     outputImg.src = result ? IMAGE_ON : IMAGE_OFF;
 
