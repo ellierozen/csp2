@@ -43,16 +43,17 @@
             z-index: 1;
         }
         h1 {
-            font-size: 40px; /* Change the font size */
-            color: #111; /* Change the text color */
-            text-align: center; /* Change the alignment */
-            margin-top: 20px; /* Change the top margin */
+            font-size: 40px;
+            color: #111;
+            text-align: center;
+            margin-top: 20px;
         }
         .card {
           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
           transition: 0.3s;
-          width: 40%;
+          width: 50%;
           background-color: #90E9EF;
+          margin: 0 auto; /* Center the card */
         }
 
         .card:hover {
@@ -61,37 +62,32 @@
 
         .container {
           padding: 2px 16px;
-		}
+        }
     </style>
 </head>
 <body>
     <img src="images/water.png" alt="image 1" width="800" height="100">
     <br>
-    <center><h1>WaterPolo Guide</h1><center>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<h2>Card</h2>
-		<div class="card">
-  			<img src="img_avatar.png" alt="Avatar" style="width:100%">
-  			<div class="container">
-   		 	<h4><b>John Doe</b></h4> 
-    		<p>Architect & Engineer</p> 
-       	 	</div>
+    <center><h1>WaterPolo Guide</h1></center>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="card">
+        <img src="img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+            <center><h4><b>John Doe</b></h4></center>
+            <center><p>Architect & Engineer</p></center>
         </div>
+    </div>
     <br>
     <br>
-   		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<h2>Card</h2>
-		<div class="card">
-  			<img src="img_avatar.png" alt="Avatar" style="width:100%">
-  			<div class="container">
-   		 	<h4><b>John Doe</b></h4> 
-    		<p>Architect & Engineer</p> 
-       	 	</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="card">
+        <img src="img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+            <center><h4><b>John Doe</b></h4></center>
+            <center><p>Architect & Engineer</p></center>
         </div>
+    </div>
     <br>
     <br>
-</body>
-</html> 
 </body>
 </html>
-
