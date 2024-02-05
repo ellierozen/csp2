@@ -57,24 +57,22 @@
           background-color: #90E9EF;
           margin: 0 auto; /* Center the card */
         }
-
         .card:hover {
           box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
-
         .container {
           padding: 2px 16px;
         }
     </style>
 </head>
 <body>
-    <img src="images/water.png" alt="image 1" width="800" height="100">
+    <img src="images/water.png" alt="image 1" width=100% height="100">
         <!-- Dropdown -->
        <div id='rectangle2' class='rectangle2'>
         <div class="dropdown">
-            <button class='button artists' onclick="location.href='//ellierozen.github.io/csp2-/homepage';';">Click here for more!</button>
+            <button class='button' onclick="location.href='//ellierozen.github.io/csp2-/homepage';';">Previous Questions</button>
             <div class="dropdown-content">
-                <a href="puthtmlfilehere">Waterpolo Quiz </a>
+                <a href="waterpoloquiz.html">Waterpolo Quiz </a>
                 <a href="puthtmlfilehere">See Previous Questions </a>
             </div>
         </div>
@@ -86,8 +84,7 @@
     <div class="card">
         <img src="waterpolo-1.png" alt="Avatar" style="width:100%">
         <div class="container">
-            <center><h4><b>Use our AI platform to help answer any of 
-your pressing questions about WaterPolo</b></h4></center>
+            <center><h4><b>Use our AI platform to help answer any of your pressing questions about WaterPolo</b></h4></center>
             <center><button>Search</button></center>
             <br>
         </div>
@@ -99,8 +96,7 @@ your pressing questions about WaterPolo</b></h4></center>
     <div class="card">
         <img src="waterpolo-2.png" alt="Avatar" style="width:100%">
         <div class="container">
-            <center><h4><b>Interested in tracking local games?  Use 
-our catalog below to enter any teams you’re interested in watching!</b></h4></center>
+            <center><h4><b>Interested in tracking local games? Use our catalog below to enter any teams you’re interested in watching!</b></h4></center>
             <center><button>Search</button></center>
             <br>
         </div>
