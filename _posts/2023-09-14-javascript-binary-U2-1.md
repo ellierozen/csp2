@@ -1,3 +1,6 @@
+---
+hide: true
+---
 <!-- 
 
 Learn how page works, plus learu about binary
