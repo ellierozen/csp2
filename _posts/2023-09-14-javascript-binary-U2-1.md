@@ -1,13 +1,3 @@
----
-title: 2.1 Binary
-layout: default
-description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
-courses: { csp: {week: 5, categories: [3.B, 3.C]} }
-categories: [C4.4]
-type: ccc
-
----
-
 <!-- 
 
 Learn how page works, plus learu about binary
