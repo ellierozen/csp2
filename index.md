@@ -27,10 +27,6 @@ search_exclude: true
             font-size: 36px;
             width: auto;
         }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
         .dropdown-content {
             display: none;
             position: absolute;
@@ -49,7 +45,7 @@ search_exclude: true
           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
           transition: 0.3s;
           width: 50%;
-          background-color: #90E9EF;
+          background-color: #7ea7f4;
           margin: 0 auto; /* Center the card */
         }
         .card:hover {
@@ -58,20 +54,61 @@ search_exclude: true
         .container {
           padding: 2px 16px;
         }
+        /* Style the dropdown button */
+        .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        }
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+        background-color: #3e8e41;
+        }
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+        /* Links inside the dropdown */
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+        }
     </style>
 </head>
 <body>
     <img src="https://cdn.discordapp.com/attachments/879557685253664768/1204205967869218826/Screenshot_2024-02-05_at_3.24.25_PM.png?ex=65d3e333&is=65c16e33&hm=aae9b2a306689aade3cf04f87fc475c907941d1de0ec7dfe45547488eeb50c53&" alt="image" style="width:100%">
-        <!-- Dropdown -->
-       <div id='rectangle2' class='rectangle2'>
-        <div class="dropdown">
-            <button class='button' onclick="location.href='//ellierozen.github.io/csp2-/homepage';';">Previous Questions</button>
-            <div class="dropdown-content">
-                <a href="waterpoloquiz.html">Waterpolo Quiz </a>
-                <a href="puthtmlfilehere">See Previous Questions </a>
-            </div>
-        </div>
-    	</div>
+    <div class="dropdown">
+    <button class="dropbtn">...</button>
+    <div class="dropdown-content">
+        <a href="waterpoloquiz.html">Waterpolo Quiz</a>
+        <a href="puthtmlfilehere">See Previous Questions</a>
+    </div>
+    </div>
         <br>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Card 1 -->
